@@ -1,0 +1,16 @@
+{
+  "name": "scorpious187s-custom-items",
+  "private": true,
+  "description": "Development scripts only; the Foundry module is described by module.json.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node -e \"for (const f of process.argv.slice(1)) require('child_process').execFileSync(process.execPath, ['--check', f], { stdio: 'inherit' })\" scripts/main.mjs scripts/shared.mjs scripts/features/spell-conduit.mjs scripts/integrations/luck-dice.mjs scripts/integrations/lib.mjs"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

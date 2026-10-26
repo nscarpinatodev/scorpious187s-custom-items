@@ -1,0 +1,35 @@
+{
+  "S187CI": {
+    "LibMissing": "Scorpious187's Custom Items: Scorpious187's Module Library isn't active. The items still work, but you won't get update notices. Install and enable the library.",
+    "Conduit": {
+      "Title": "Channel a Spell",
+      "Hint": "Choose a spell to fire through {item}. Range ×{mult}, {bonus} to the spell attack roll.",
+      "Fire": "Fire",
+      "Cancel": "Cancel",
+      "Range": "Range",
+      "ToHit": "To Hit",
+      "Cantrip": "Cantrip",
+      "NoSpells": "{actor} has no prepared spells that can be channeled through {item}.",
+      "NotEquipped": "{item} must be equipped to channel spells through it.",
+      "NotAttuned": "{item} must be attuned to channel spells through it.",
+      "NoActor": "{item} must be owned by an actor to channel spells.",
+      "OutOfRange": "Out of range ({range}): {targets}",
+      "OutOfRangeLuckDice": "Out of range ({range}): {targets}. Luck Dice Automation would cancel the attack, so the spell wasn't cast.",
+      "OutOfRangeTitle": "Target Out of Range",
+      "OutOfRangeConfirm": "These targets are beyond {spell}'s channeled range of {range}:<br><strong>{targets}</strong><br><br>Fire anyway?"
+    },
+    "Setting": {
+      "ConduitRangeCheck": {
+        "Name": "Spell Conduits: Range Check",
+        "Hint": "Before a spell is cast through a conduit, compare its channeled range with your current targets. With Luck Dice Automation's attack automation on, out-of-range targets always stop the cast (Luck Dice would cancel the attack roll after the slot was spent).",
+        "Off": "Off",
+        "Confirm": "Ask before firing at out-of-range targets",
+        "Block": "Refuse to fire at out-of-range targets"
+      },
+      "Debug": {
+        "Name": "Debug Logging",
+        "Hint": "Log what the custom items do to the browser console."
+      }
+    }
+  }
+}

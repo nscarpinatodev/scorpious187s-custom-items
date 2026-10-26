@@ -1,0 +1,187 @@
+{
+  "_id": "kilianEldRifle01",
+  "_key": "!items!kilianEldRifle01",
+  "name": "Kilian's Eldritch Rifle",
+  "type": "equipment",
+  "img": "modules/scorpious187s-custom-items/assets/kilians-eldritch-rifle.webp",
+  "system": {
+    "description": {
+      "value": "<p>This crossbow/rifle hybrid does not fire standard crossbow bolts. Instead, it transforms a spell cast into it into a projectile, increasing the spell's range and accuracy.</p><p>When casting a spell with a ranged attack through this weapon, add +2 to the spell's attack bonus, and the spell's range is doubled.</p><p><em>Use the Channel Spell activity to choose a ranged spell attack to fire through the rifle.</em></p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "attunement": "required",
+    "attuned": false,
+    "equipped": false,
+    "cover": null,
+    "uses": {
+      "max": "",
+      "spent": 0,
+      "recovery": []
+    },
+    "armor": {
+      "value": null,
+      "dex": null
+    },
+    "hp": {
+      "value": null,
+      "max": null,
+      "dt": null,
+      "conditions": ""
+    },
+    "type": {
+      "value": "trinket",
+      "baseItem": ""
+    },
+    "properties": [
+      "foc",
+      "mgc"
+    ],
+    "speed": {
+      "value": null,
+      "conditions": "",
+      "units": "ft"
+    },
+    "strength": null,
+    "proficient": null,
+    "activities": {
+      "kilianRifleFire0": {
+        "_id": "kilianRifleFire0",
+        "type": "utility",
+        "activation": {
+          "type": "special",
+          "value": null,
+          "condition": "Uses the casting time of the channeled spell",
+          "override": false
+        },
+        "consumption": {
+          "targets": [],
+          "scaling": {
+            "allowed": false,
+            "max": ""
+          },
+          "spellSlot": false
+        },
+        "description": {
+          "chatFlavor": "Channel a ranged spell attack through the rifle.",
+          "value": ""
+        },
+        "duration": {
+          "concentration": false,
+          "value": "",
+          "units": "inst",
+          "special": "",
+          "override": false,
+          "expiry": null
+        },
+        "effects": [],
+        "range": {
+          "units": "self",
+          "special": "",
+          "override": false
+        },
+        "target": {
+          "template": {
+            "count": "",
+            "contiguous": false,
+            "type": "",
+            "size": "",
+            "width": "",
+            "height": "",
+            "units": "ft",
+            "stationary": false
+          },
+          "affects": {
+            "count": "",
+            "type": "",
+            "choice": false,
+            "special": ""
+          },
+          "prompt": true,
+          "override": false
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        },
+        "roll": {
+          "formula": "",
+          "name": "",
+          "prompt": false,
+          "visible": false
+        },
+        "sort": 0,
+        "flags": {},
+        "visibility": {
+          "level": {},
+          "requireAttunement": true,
+          "requireIdentification": false,
+          "requireMagic": false
+        },
+        "img": null,
+        "behaviors": [],
+        "name": "Channel Spell"
+      }
+    },
+    "identifier": "kilians-eldritch-rifle",
+    "crew": {
+      "value": []
+    },
+    "rarities": []
+  },
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "dnd5e": {
+      "riders": {
+        "activity": [],
+        "effect": []
+      }
+    },
+    "scorpious187s-custom-items": {
+      "spellConduit": {
+        "activity": "kilianRifleFire0",
+        "attackBonus": 2,
+        "rangeMultiplier": 2,
+        "attackTypes": [
+          "rsak"
+        ],
+        "requireEquipped": true,
+        "requireAttunement": true
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "6.0.6",
+    "coreVersion": "14.369",
+    "createdTime": 1792912836984,
+    "modifiedTime": 1792912836984,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+  },
+  "folder": null
+}

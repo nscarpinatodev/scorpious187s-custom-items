@@ -1,0 +1,6 @@
+# Foundry VTT LevelDB compendium pack files are binary.
+packs/**/*.ldb      binary
+packs/**/*.log      binary
+packs/**/CURRENT    binary
+packs/**/MANIFEST-* binary
+*.webp binary

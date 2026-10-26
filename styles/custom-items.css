@@ -1,0 +1,63 @@
+/* Spell conduit picker (features/spell-conduit.mjs) */
+
+.s187ci-conduit .s187ci-hint {
+  margin: 0 0 0.5rem;
+  font-style: italic;
+}
+
+.s187ci-conduit .s187ci-spell-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.s187ci-conduit .s187ci-spell-list li label {
+  display: grid;
+  grid-template-columns: auto 32px 1fr auto auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.375rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.s187ci-conduit .s187ci-spell-list li label:hover {
+  background: rgba(127, 127, 127, 0.15);
+}
+
+.s187ci-conduit .s187ci-spell-list li:has(input:checked) label {
+  background: rgba(127, 127, 127, 0.25);
+  outline: 1px solid var(--color-border-highlight, #ff6400);
+}
+
+.s187ci-conduit .s187ci-spell-list img {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 3px;
+}
+
+.s187ci-conduit .s187ci-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.s187ci-conduit .s187ci-name small {
+  opacity: 0.7;
+}
+
+.s187ci-conduit .s187ci-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 4.5rem;
+  line-height: 1.2;
+}
+
+.s187ci-conduit .s187ci-stat s {
+  opacity: 0.55;
+  font-size: 0.85em;
+}

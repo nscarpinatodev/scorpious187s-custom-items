@@ -1,0 +1,79 @@
+{
+  "id": "scorpious187s-custom-items",
+  "title": "Scorpious187's Custom Items",
+  "description": "Homebrew magic items with their own automation for dnd5e 6 — starting with Kilian's Eldritch Rifle, a spell conduit that fires the wielder's ranged spell attacks at double range and +2 to hit. Works with Scorpious187's Luck Dice Automation (native mode).",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "14.368",
+    "verified": "14.369"
+  },
+  "authors": [
+    {
+      "name": "Scorpious187",
+      "url": "https://github.com/nscarpinatodev"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/custom-items.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "custom-items",
+      "label": "Scorpious187's Custom Items",
+      "path": "packs/custom-items",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "6.0.0",
+          "verified": "6.0.6"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "scorpious187s-lib",
+        "type": "module",
+        "manifest": "https://github.com/nscarpinatodev/scorpious187s-lib/releases/latest/download/module.json",
+        "compatibility": {
+          "minimum": "0.3.0"
+        }
+      }
+    ],
+    "recommends": [
+      {
+        "id": "scorpious187s-luck-dice-automation",
+        "type": "module",
+        "manifest": "https://github.com/nscarpinatodev/scorpious187s-luck-dice-automation/releases/latest/download/module.json",
+        "compatibility": {
+          "minimum": "1.2.0"
+        },
+        "reason": "Optional. Channeled spells run through Luck Dice's native attack automation — rays, target confirmation, range checks, Luck Dice on a miss — with the item's range and attack bonus applied."
+      }
+    ]
+  },
+  "url": "https://github.com/nscarpinatodev/scorpious187s-custom-items",
+  "manifest": "https://github.com/nscarpinatodev/scorpious187s-custom-items/releases/latest/download/module.json",
+  "download": "https://github.com/nscarpinatodev/scorpious187s-custom-items/releases/download/v1.0.0/module.zip",
+  "readme": "https://github.com/nscarpinatodev/scorpious187s-custom-items#readme"
+}

@@ -1,0 +1,6 @@
+# Build artifacts
+node_modules/
+/packs/
+/dist/
+*.zip
+.claude/
