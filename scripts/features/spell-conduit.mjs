@@ -1,6 +1,10 @@
 // ── Scorpious187's Custom Items ───────────────────────────────────────────────
 // Spell conduits (Kilian's Eldritch Rifle).
 //
+// The multiplier applies to the spell's whole range, increases included: enchantments (Eldritch Spear) are
+// in the prepared range it multiplies; Luck Dice Automation multiplies what it adds itself (Distant Spell,
+// Spell Sniper, its own Eldritch Spear) by the copy's rangeMultiplier, read from the conduitCast flag.
+//
 // Using the conduit's activity opens a picker of the wielder's castable spells
 // with a qualifying attack (ranged spell attacks by default). The chosen spell
 // is cast from an unsaved, actor-parented copy of it — same _id — whose range is
@@ -86,6 +90,23 @@ function appendBonus(existing, bonus) {
   return current ? `${current} + ${bonus}` : `${bonus}`;
 }
 
+const RANGE_CHANGE = /^system\.(range|activities\.[^.]+\.range)(\.|$)/;
+
+/**
+ * Remove the range changes of the enchantments a spell carries (Eldritch Spear's "Increase Range") from its
+ * copied source. The copy's range is set from the spell's prepared range, which already includes them;
+ * left in, the copy would apply them a second time. Their other changes (the name, damage…) stay.
+ */
+export function dropEnchantmentRangeChanges(source) {
+  for (const effect of source.effects ?? []) {
+    if (effect?.type !== "enchantment") continue;
+    for (const holder of [effect.system, effect]) {
+      if (Array.isArray(holder?.changes)) holder.changes = holder.changes.filter(c => !RANGE_CHANGE.test(String(c?.key ?? "")));
+    }
+  }
+  return source;
+}
+
 /** Whether this item is a channeled copy (rather than the spell on the actor). */
 export const isChanneled = (item) => !!item?.flags?.[MODULE_ID]?.[CAST_FLAG];
 
@@ -98,6 +119,10 @@ export const isChanneled = (item) => !!item?.flags?.[MODULE_ID]?.[CAST_FLAG];
 export function buildChanneledSpell(spell, cast) {
   const source = spell.toObject();
   const mult = Number(cast.rangeMultiplier) || 1;
+
+  // The conduit multiplies the spell's whole range, increases included: the prepared range already carries
+  // what enchantments add (Eldritch Spear), so the copy mustn't add it again on top of the multiplied value.
+  dropEnchantmentRangeChanges(source);
 
   const itemRange = scaleRange(spell.system.range, mult);
   if (itemRange) source.system.range.value = itemRange;

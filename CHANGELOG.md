@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- **Kilian's Eldritch Rifle:** a spell's range increases from enchantments (Eldritch Spear's *Increase Range*) were counted twice through the rifle. The rifle now doubles the spell's whole range once, increases included: a 5th-level warlock's Eldritch Blast with Eldritch Spear reaches (120 + 150) × 2 = 540 ft. With Luck Dice Automation 2.5.0 or later, the range it adds itself (Distant Spell, Spell Sniper, its own Eldritch Spear) is doubled by the rifle too.
+
 ## 1.0.0
 
 **First release.** Homebrew magic items with their own automation for dnd5e 6 on Foundry VTT 14, built for dnd5e's native rolls with Scorpious187's Luck Dice Automation.
