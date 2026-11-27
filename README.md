@@ -36,13 +36,3 @@ Any item becomes a spell conduit with this flag:
 ```
 
 Give the item a utility activity. Using that activity opens the picker instead of posting a card. Macros can call `game.modules.get("scorpious187s-custom-items").api.spellConduit.open(item)`.
-
-## Development
-
-```
-npm install
-npm run build   # src/packs/*/ JSON → packs/ (LevelDB)
-npm run check   # syntax-check the scripts
-```
-
-To release, push a `v*` tag. CI builds the packs, stamps `module.json` from the tag, and publishes `module.json` + `module.zip`.
